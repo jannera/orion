@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class GravityAttractor : MonoBehaviour {
-    private const float GRAV_CONSTANT = 6.673E-7f;
+    private const float GRAV_CONSTANT = 6.673E-8f;
     private Vector3 force = new Vector3();
 
 	void FixedUpdate()

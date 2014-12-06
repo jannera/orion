@@ -32,13 +32,18 @@ public class AsteroidLauncher : MonoBehaviour {
             // launch the asteroid
             
             // first create it
-            Quaternion rotation = Quaternion.identity; // todo create a random rotation instead
+            Quaternion rotation = Quaternion.identity;
             GameObject asteroid = (GameObject) Instantiate(asteroidPreFab, launchPoint.position, rotation);
             Rigidbody astRig = asteroid.rigidbody;
 
             // then cause a force on it, based on the time the button was held down
             Vector3 force = launchPoint.position - transform.position;
             force = force.normalized * astRig.mass * maxStartVelocity * (secsButtonHeld/maxPowerUpSecs);
+
+            // put a random spin on it
+            Vector3 spin = new Vector3(Random.Range(-1, 1), Random.Range(-1, 1), Random.Range(-1, 1));
+            spin *= astRig.mass;
+            astRig.AddRelativeTorque(spin, ForceMode.Impulse);
 
             asteroid.rigidbody.AddForce(force, ForceMode.Impulse);
             poweringUp = false;
