@@ -10,11 +10,23 @@ public class AsteroidLauncher : MonoBehaviour {
     private bool poweringUp = false;
     private const float maxStartVelocity = 20/8f;
 
+    public int startAsteroids = 3;
+    public int asteroids;
+
+    void Awake()
+    {
+        asteroids = startAsteroids;
+    }
+
 	void Start () {
-	
+        
 	}
 	
 	void Update () {
+        if (!CanFire())
+        {
+            return;
+        }
         if (Input.GetButtonDown("Fire1"))
         {
             // start calculating force and show the force bar
@@ -48,6 +60,14 @@ public class AsteroidLauncher : MonoBehaviour {
             asteroid.rigidbody.AddForce(force, ForceMode.Impulse);
             poweringUp = false;
             secsButtonHeld = 0;
+
+            asteroids--;
+            GameState.LaunchAsteroid();
         }
 	}
+
+    private bool CanFire()
+    {
+        return asteroids > 0;
+    }
 }

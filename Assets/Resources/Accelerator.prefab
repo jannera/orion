@@ -28,6 +28,7 @@ GameObject:
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400002}
   - 114: {fileID: 11400000}
+  - 114: {fileID: 11400004}
   m_Layer: 0
   m_Name: Accelerator
   m_TagString: Untagged
@@ -112,6 +113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidPreFab: {fileID: 100000, guid: aee2acfebbf412b4789270cb8e8c4881, type: 2}
   launchPoint: {fileID: 400000}
+  startAsteroids: 3
+  asteroids: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -124,6 +127,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothTurning: 10
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd6b48a86a65f0846993e9f52f193d30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  secsToLiveAfterLastLaunch: 5
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
