@@ -6,7 +6,7 @@ public class AsteroidLauncher : MonoBehaviour {
     public Transform launchPoint;
 
     private float secsButtonHeld = 0;
-    private const float maxPowerUpSecs = 3f;
+    private const float maxPowerUpSecs = 1.75f;
     private bool poweringUp = false;
     private const float maxStartVelocity = 20/8f;
 
@@ -69,5 +69,11 @@ public class AsteroidLauncher : MonoBehaviour {
     private bool CanFire()
     {
         return asteroids > 0;
+    }
+
+    // how long button has been held, as number between 0-1
+    public float GetLaunchStatus()
+    {
+        return secsButtonHeld / maxPowerUpSecs;
     }
 }
