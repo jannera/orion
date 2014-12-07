@@ -15,6 +15,7 @@ public class MineCollider : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+        other.gameObject.GetComponent<OrionExploder>().Explode(transform.position);
         Destroy(other.gameObject);
         Destroy(this.gameObject);
     }

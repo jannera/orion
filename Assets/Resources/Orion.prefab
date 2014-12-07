@@ -11,6 +11,7 @@ GameObject:
   - 54: {fileID: 5400000}
   - 135: {fileID: 13500000}
   - 95: {fileID: 9500002}
+  - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: Orion
   m_TagString: Asteroid
@@ -503,6 +504,32 @@ Animator:
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fe42852053ff76448350678f8842b94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partLinks:
+  - sourcePart: {fileID: 400014}
+    destinationPreFab: {fileID: 100000, guid: 0b0b2e764ddbeff4384e67290eb9eda7, type: 2}
+  - sourcePart: {fileID: 400012}
+    destinationPreFab: {fileID: 100000, guid: fdd5aa2331212524cb089612cc3826d4, type: 2}
+  - sourcePart: {fileID: 400010}
+    destinationPreFab: {fileID: 100000, guid: 1aee2264f65eba24f84611a2e9448735, type: 2}
+  - sourcePart: {fileID: 400008}
+    destinationPreFab: {fileID: 100000, guid: 285bdc9fd0bab0448a2d43156ffdb435, type: 2}
+  - sourcePart: {fileID: 400006}
+    destinationPreFab: {fileID: 100000, guid: 33cf5f35012332248a9da7514a8be22a, type: 2}
+  - sourcePart: {fileID: 400004}
+    destinationPreFab: {fileID: 100000, guid: 6267dab361274214a8f1f2835ccdea3e, type: 2}
+  - sourcePart: {fileID: 400002}
+    destinationPreFab: {fileID: 100000, guid: 883d593889f17e047b25ef22c735b61a, type: 2}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1
