@@ -164,7 +164,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!114 &12686781
 MonoBehaviour:
@@ -418,7 +418,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!114 &113060322
 MonoBehaviour:
@@ -2188,6 +2188,7 @@ GameObject:
   - 95: {fileID: 842302234}
   - 114: {fileID: 842302236}
   - 114: {fileID: 842302235}
+  - 114: {fileID: 842302237}
   m_Layer: 5
   m_Name: Level Finishing Canvas
   m_TagString: Untagged
@@ -2311,6 +2312,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75498334cf0fe5a47ad0c260169471f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &842302237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400014, guid: e824c1d8a725e40498d6cd5a151eeb02,
+    type: 2}
+  m_PrefabInternal: {fileID: 1913288552}
+  m_GameObject: {fileID: 842302229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd917b9e6be131a408d5383fc719ae69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &853931492
@@ -2661,7 +2674,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!114 &992549847
 MonoBehaviour:
@@ -3440,7 +3453,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!114 &1527975128
 MonoBehaviour:

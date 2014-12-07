@@ -15,6 +15,7 @@ public class PlanetCollisionListener : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
+        LevelCompletion.MarkCurrentLevelCompleted();
         GameState.LevelCompleted();
         Destroy(other.gameObject);
     }
