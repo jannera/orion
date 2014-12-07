@@ -13,9 +13,7 @@ public class LaunchIndicator : MonoBehaviour {
         pos = overlayCube.transform.localPosition;
 	}
 	
-	// Update is called once per frame
 	void Update () {
-        Debug.Log(launcher.GetLaunchStatus());
         pos.z = launcher.GetLaunchStatus() * maxSize;
         overlayCube.transform.localPosition = pos;
 	}
