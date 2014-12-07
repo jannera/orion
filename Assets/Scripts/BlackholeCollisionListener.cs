@@ -1,12 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlanetCollisionListener : MonoBehaviour {
+public class BlackholeCollisionListener : MonoBehaviour {
 
-	void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        LevelCompletion.MarkCurrentLevelCompleted();
-        GameState.LevelCompleted();
         Rigidbody r = other.gameObject.GetComponent<Rigidbody>();
         r.isKinematic = true;
         other.gameObject.GetComponent<Animator>().SetTrigger("StartDescent");
