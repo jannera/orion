@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class GravityAttractor : MonoBehaviour {
-    private const float GRAV_CONSTANT = 6.673E-8f;
     private Vector3 force = new Vector3();
+    public AnimationCurve forceCurve;
 
 	void FixedUpdate()
     {
@@ -12,17 +12,12 @@ public class GravityAttractor : MonoBehaviour {
         for (int i = 0; i < asteroids.Length; i++)
         {
             force = transform.position - asteroids[i].transform.position;
-            float dstSqr = force.sqrMagnitude;
+            float dst = force.magnitude;
             force.Normalize();
-            force *= GetForceBetween(rigidbody, asteroids[i].rigidbody, dstSqr);
+            force *= forceCurve.Evaluate(dst);
             force *= Time.deltaTime;
 
-            asteroids[i].rigidbody.AddForce(force);
+            asteroids[i].rigidbody.AddForce(force, ForceMode.VelocityChange);
         }
-    }
-
-    private float GetForceBetween(Rigidbody a, Rigidbody b, float dstSqr)
-    {
-        return GRAV_CONSTANT * a.mass * b.mass / dstSqr;
     }
 }

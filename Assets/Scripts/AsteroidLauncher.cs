@@ -8,7 +8,7 @@ public class AsteroidLauncher : MonoBehaviour {
     private float secsButtonHeld = 0;
     private const float maxPowerUpSecs = 1.75f;
     private bool poweringUp = false;
-    private const float maxStartVelocity = 20/8f;
+    private const float maxStartVelocity = 2.5f;
 
     public int startAsteroids = 3;
     public int asteroids;
