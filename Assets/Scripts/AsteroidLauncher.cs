@@ -42,7 +42,6 @@ public class AsteroidLauncher : MonoBehaviour {
 
         if (Input.GetButtonDown("Fire1"))
         {
-            Debug.Log(events.currentSelectedGameObject);
             // start calculating force and show the force bar
             poweringUp = true;
             chargeUp.Play();
