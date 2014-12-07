@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class AsteroidLauncher : MonoBehaviour {
     public GameObject asteroidPreFab;
@@ -15,6 +16,7 @@ public class AsteroidLauncher : MonoBehaviour {
 
     public AudioSource chargeUp;
     public AudioSource launch;
+    public EventSystem events;
 
     void Awake()
     {
@@ -32,8 +34,15 @@ public class AsteroidLauncher : MonoBehaviour {
         {
             return;
         }
+
+        if (events.currentSelectedGameObject != null)
+        {
+            return;
+        }
+
         if (Input.GetButtonDown("Fire1"))
         {
+            Debug.Log(events.currentSelectedGameObject);
             // start calculating force and show the force bar
             poweringUp = true;
             chargeUp.Play();

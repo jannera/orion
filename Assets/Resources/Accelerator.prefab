@@ -889,6 +889,7 @@ MonoBehaviour:
   asteroids: 0
   chargeUp: {fileID: 8200000}
   launch: {fileID: 8200002}
+  events: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
