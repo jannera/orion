@@ -13,9 +13,13 @@ public class AsteroidLauncher : MonoBehaviour {
     public int startAsteroids = 3;
     public int asteroids;
 
+    public AudioSource chargeUp;
+    public AudioSource launch;
+
     void Awake()
     {
         asteroids = startAsteroids;
+
     }
 
 	void Start () {
@@ -32,6 +36,7 @@ public class AsteroidLauncher : MonoBehaviour {
         {
             // start calculating force and show the force bar
             poweringUp = true;
+            chargeUp.Play();
         }
 
         if (poweringUp)
@@ -63,6 +68,8 @@ public class AsteroidLauncher : MonoBehaviour {
             secsButtonHeld = 0;
 
             asteroids--;
+            chargeUp.Stop();
+            launch.Play();
             GameState.LaunchAsteroid();
         }
 	}
