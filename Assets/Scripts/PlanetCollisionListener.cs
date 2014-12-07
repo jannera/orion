@@ -17,6 +17,8 @@ public class PlanetCollisionListener : MonoBehaviour {
     {
         LevelCompletion.MarkCurrentLevelCompleted();
         GameState.LevelCompleted();
-        Destroy(other.gameObject);
+        Rigidbody r = other.gameObject.GetComponent<Rigidbody>();
+        r.isKinematic = true;
+        other.gameObject.GetComponent<Animator>().SetTrigger("StartDescent");
     }
 }
