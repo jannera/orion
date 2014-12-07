@@ -19,7 +19,8 @@ public class AsteroidLauncher : MonoBehaviour {
     }
 
 	void Start () {
-        
+        poweringUp = false;
+        secsButtonHeld = 0;
 	}
 	
 	void Update () {
